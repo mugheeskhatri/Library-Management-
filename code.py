@@ -10,7 +10,7 @@ def speak(text):
 books = ["Harry Potter", "Atomic Habits", "Rich Dad Poor Dad", "The Alchemist"]
 
 while True:
-    print("\n📚 Welcome to the Library Management System 📚")
+    print("\nWelcome to the Library Management System")
     speak("Welcome to the Library Management System")
 
     print("1. Show all books")
@@ -31,28 +31,28 @@ while True:
     elif choice == "2":
         new_book = input("Enter book name to add: ").strip()
         if new_book in books:
-            print("⚠️ This book is already added!")
+            print("This book is already added!")
             speak("This book is already added")
         else:
             books.append(new_book)
-            print(f"✅ '{new_book}' has been added successfully!")
+            print(f"'{new_book}' has been added successfully!")
             speak(f"{new_book} has been added successfully")
 
     elif choice == "3":
         remove_book = input("Enter book name to remove: ").strip()
         if remove_book in books:
             books.remove(remove_book)
-            print(f"🗑 '{remove_book}' has been removed from the library!")
+            print(f"'{remove_book}' has been removed from the library!")
             speak(f"{remove_book} has been removed from the library")
         else:
-            print("❌ Book not found in the library!")
+            print("Book not found in the library!")
             speak("Book not found in the library")
 
     elif choice == "4":
-        print("👋 Exiting Library System. Goodbye!")
+        print("Exiting Library System. Goodbye!")
         speak("Exiting Library System. Goodbye")
         break
 
     else:
-        print("⚠️ Invalid choice! Please enter a number from 1 to 4.")
+        print("Invalid choice! Please enter a number from 1 to 4.")
         speak("Invalid choice! Please enter a number from one to four")
